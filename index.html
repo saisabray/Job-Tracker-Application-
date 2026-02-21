@@ -36,16 +36,22 @@
         <h2 class="font-bold text-[#002C5C] text-2xl">Job Application</h2>
         <div class="fitter-container flex gap-4">
           <button
+            onclick="toggleStyle('filter-all')"
             id="filter-all"
             class="bg-blue-500 text-white rounded w-max px-5 py-2 shadow"
-          >
-            All
+          >All
           </button>
-          <button id="filter-interview" class="rounded w-max px-5 py-2 shadow">
-            Interview
+          <button
+            onclick="toggleStyle('filter-interview')"
+            id="filter-interview"
+            class=" rounded w-max px-5 py-2 shadow"
+          >Interview
           </button>
-          <button id="filter-rejected" class="rounded w-max px-5 py-2 shadow">
-            Rejected
+          <button
+            onclick="toggleStyle('filter-rejected')"
+            id="filter-rejected"
+            class="rounded w-max px-5 py-2 shadow"
+          >Rejected
           </button>
         </div>
       </section>
@@ -55,7 +61,8 @@
       >
         <div class="job-card shadow p-10 rounded-lg flex flex-col gap-5">
           <h2 class="font-bold text-[#002C5C] text-2xl">Job Application</h2>
-          <p class="block text-[#64748B] text-[16px]">React Native Developer</p>
+          <p class="block text-[#64748B] text-[16px]"
+            >React Native Developer </p>
           <div class="job-details flex gap-2 text-red-500 text-sm items-center">
             <span>Remote</span>
             <span>.</span>
@@ -170,5 +177,6 @@
         </div>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
