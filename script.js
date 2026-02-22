@@ -60,6 +60,12 @@ mainContainer.addEventListener("click", function (e) {
     if (!existing) {
       interviewList.push(cardInfo);
     }
+    rejectedList = rejectedList.filter(
+      (item) => item.companyName !== companyName,
+    );
+    if (currentStatus === "filter-interview") {
+      interviewRender();
+    }
     calculateCount();
   }
   // Rejected
@@ -81,6 +87,12 @@ mainContainer.addEventListener("click", function (e) {
     );
     if (!existing) {
       rejectedList.push(cardInfo);
+    }
+    interviewList = interviewList.filter(
+      (item) => item.companyName !== companyName,
+    );
+    if (currentStatus === "filter-rejected") {
+      rejectedRender();
     }
     calculateCount();
   }
