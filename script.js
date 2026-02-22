@@ -137,4 +137,56 @@ ${interview.companyName}</h2>
     filterSection.appendChild(div);
   }
 }
+// Rejected Rendering
+function rejectedRender() {
+  filterSection.innerHTML = "";
+  for (let rejected of rejectedList) {
+    const div = document.createElement("div");
+    div.className = "job-card shadow p-10 rounded-lg flex justify-between";
+    div.innerHTML = `
+        
+         <div class="card-details flex flex-col gap-5">
+            <h2 class="company-name font-bold text-[#002C5C] text-2xl">
+${rejected.companyName}            </h2>
+            <span class="job-name block text-[#64748B] text-[16px]"
+              >${rejected.jobName}</span
+            >
+            <div
+              class="job-details flex gap-2 text-red-500 text-sm items-center"
+            >
+             ${rejected.jobDetails}
+            </div>
+            <p
+              class="status w-max rounded text-sm font-semibold font-white py-3 px-5 bg-[#EEF4FF]"
+            >
+${rejected.status}            </p>
 
+            <p>
+              Build cross-platform mobile applications using React Native. Work
+              on products used by millions of users worldwide.
+            </p>
+            <div class="flex gap-5">
+              <button
+                class="interview-btn px-4 py-2 text-green-500 font-bold text-2xl border-2 border-green-500 rounded"
+              >
+                INTERVIEW
+              </button>
+              <button
+                class="rejected-btn px-4 py-2 text-red-500 font-bold text-2xl border-2 border-red-500 rounded"
+              >
+                REJECTED
+              </button>
+            </div>
+          </div>
+          <div>
+            <button
+              class="delete-btn bg-red-400 text-white font-bold py-2 px-3"
+            >
+              Delete
+            </button>
+          </div>
+
+  `;
+    filterSection.appendChild(div);
+  }
+}
