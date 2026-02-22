@@ -30,7 +30,10 @@
     <hr class="container m-8 w-[1200px] mx-auto text-[#E6E7E9]" />
     <main>
       <section class="container mx-auto max-w-[1200px] space-y-6">
-        <h2 class="font-bold text-[#002C5C] text-2xl">Job Application</h2>
+        <div class="flex justify-between items-center">
+          <h2 class="font-bold text-[#002C5C] text-2xl">Job Application</h2>
+          <span id="job-total-text" class="font-semibold text-lg">0 Jobs</span>
+        </div>
         <div class="fitter-container flex gap-4">
           <button
             onclick="toggleShow('filter-all')"
@@ -56,9 +59,8 @@
         </div>
       </section>
 
-
       <!-- Card-Section -->
-       
+
       <section
         id="job-list"
         class="container mx-auto max-w-[1200px] space-y-3 mt-6"
