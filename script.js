@@ -35,6 +35,18 @@ function toggleShow(id) {
   currentStatus = id;
   selected.classList.add("bg-blue-500", "text-white");
   selected.classList.remove("text-black");
+  if (id === "filter-interview") {
+    jobList.classList.add("hidden");
+    filterSection.classList.remove("hidden");
+    interviewRender();
+  } else if (id === "filter-all") {
+    jobList.classList.remove("hidden");
+    filterSection.classList.add("hidden");
+  } else if (id === "filter-rejected") {
+    jobList.classList.add("hidden");
+    filterSection.classList.remove("hidden");
+    rejectedRender();
+  }
 }
 
 // Interview
