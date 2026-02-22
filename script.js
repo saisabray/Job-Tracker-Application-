@@ -114,6 +114,23 @@ mainContainer.addEventListener("click", function (e) {
 // Interview Rendering
 function interviewRender() {
   filterSection.innerHTML = "";
+  if (interviewList.length === 0) {
+    const div = document.createElement("div");
+    div.className =
+      "flex justify-center items-center flex-col gap-5 shadow p-10 rounded-lg h-[350px]";
+    div.innerHTML = ` <img
+            src="assets/jobs.png"
+            class="w-[50px] block"
+            alt="document.png"
+          />
+          <h2 class="company-name font-bold text-[#002C5C] text-2xl">
+            No job available
+          </h2>
+
+    `;
+    filterSection.appendChild(div);
+    return;
+  }
   for (let interview of interviewList) {
     const div = document.createElement("div");
     div.className = "job-card shadow p-10 rounded-lg flex justify-between";
@@ -164,6 +181,23 @@ ${interview.companyName}</h2>
 // Rejected Rendering
 function rejectedRender() {
   filterSection.innerHTML = "";
+  if (interviewList.length === 0) {
+    const div = document.createElement("div");
+    div.className =
+      "flex justify-center items-center flex-col gap-5 shadow p-10 rounded-lg h-[350px]";
+    div.innerHTML = ` <img
+            src="assets/jobs.png"
+            class="w-[50px] block"
+            alt="document.png"
+          />
+          <h2 class="company-name font-bold text-[#002C5C] text-2xl">
+            No job available
+          </h2>
+
+    `;
+    filterSection.appendChild(div);
+    return;
+  }
   for (let rejected of rejectedList) {
     const div = document.createElement("div");
     div.className = "job-card shadow p-10 rounded-lg flex justify-between";
