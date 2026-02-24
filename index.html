@@ -89,11 +89,18 @@
         id="job-list"
         class="container mx-auto max-w-[1200px] space-y-3 mt-6"
       >
-        <div class="job-card shadow p-10 rounded-lg flex justify-between">
+        <div class="job-card shadow p-5 md:p-10 rounded-lg">
           <div class="card-details flex flex-col gap-5">
-            <h2 class="company-name font-bold text-[#002C5C] text-2xl">
-              Mobile First Corp
-            </h2>
+            <div class="flex justify-between items-center">
+              <h2 class="company-name font-bold text-[#002C5C] text-2xl">
+                Mobile First Corp
+              </h2>
+              <button
+                class="delete-btn rounded-full bg-transparent border border-gray-300 text-black font-bold w-10 h-10"
+              >
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
             <span class="job-name block text-[#64748B] text-[16px]"
               >React Native Developer</span
             >
@@ -101,9 +108,9 @@
               class="job-details flex gap-2 text-red-500 text-sm items-center"
             >
               <span>Remote</span>
-              <span>.</span>
+              <span>&bull;</span>
               <span>Full-time</span>
-              <span>.</span>
+              <span>&bull;</span>
               <span>$130,000 - $175,000</span>
             </div>
             <p
@@ -118,40 +125,40 @@
             </p>
             <div class="flex gap-5">
               <button
-                class="interview-btn px-4 py-2 text-green-500 font-bold text-2xl border-2 border-green-500 rounded"
+                class="interview-btn px-4 py-2 text-green-500 font-bold text-lg md:text-2xl border-2 border-green-500 rounded"
               >
                 INTERVIEW
               </button>
               <button
-                class="rejected-btn px-4 py-2 text-red-500 font-bold text-2xl border-2 border-red-500 rounded"
+                class="rejected-btn px-4 py-2 text-red-500 font-bold text-lg md:text-2xl border-2 border-red-500 rounded"
               >
                 REJECTED
               </button>
             </div>
           </div>
-          <div>
-            <button
-              class="delete-btn rounded-full bg-transparent border border-gray-300 text-black font-bold w-10 h-10"
-            >
-              <i class="fa-regular fa-trash-can"></i>
-            </button>
-          </div>
         </div>
-        <div class="job-card shadow p-10 rounded-lg flex justify-between">
+        <div class="job-card shadow p-5 md:p-10 rounded-lg">
           <div class="card-details flex flex-col gap-5">
-            <h2 class="company-name font-bold text-[#002C5C] text-2xl">
-              WebFlow Agency
-            </h2>
+            <div class="flex justify-between items-center">
+              <h2 class="company-name font-bold text-[#002C5C] text-2xl">
+                WebFlow Agency
+              </h2>
+              <button
+                class="delete-btn rounded-full bg-transparent border border-gray-300 text-black font-bold w-10 h-10"
+              >
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
             <span class="job-name block text-[#64748B] text-[16px]"
-              >Web Designer & Developerr</span
-            >
+              >Web Designer & Developer
+            </span>
             <div
               class="job-details flex gap-2 text-red-500 text-sm items-center"
             >
-              <span>Los Angeles, CA</span>
-              <span>.</span>
+              <span>Los Angeles, CA </span>
+              <span> &bull; </span>
               <span>Part-time</span>
-              <span>.</span>
+              <span> &bull; </span>
               <span> $80,000 - $120,000</span>
             </div>
             <p
@@ -166,30 +173,30 @@
             </p>
             <div class="flex gap-5">
               <button
-                class="interview-btn px-4 py-2 text-green-500 font-bold text-2xl border-2 border-green-500 rounded"
+                class="interview-btn px-4 py-2 text-green-500 font-bold text-lg md:text-2xl border-2 border-green-500 rounded"
               >
                 INTERVIEW
               </button>
               <button
-                class="rejected-btn px-4 py-2 text-red-500 font-bold text-2xl border-2 border-red-500 rounded"
+                class="rejected-btn px-4 py-2 text-red-500 font-bold text-lg md:text-2xl border-2 border-red-500 rounded"
               >
                 REJECTED
               </button>
             </div>
           </div>
-          <div>
-            <button
-              class="delete-btn rounded-full bg-transparent border border-gray-300 text-black font-bold w-10 h-10"
-            >
-              <i class="fa-regular fa-trash-can"></i>
-            </button>
-          </div>
         </div>
-        <div class="job-card shadow p-10 rounded-lg flex justify-between">
+        <div class="job-card shadow p-5 md:p-10 rounded-lg">
           <div class="card-details flex flex-col gap-5">
-            <h2 class="company-name font-bold text-[#002C5C] text-2xl">
-              DataViz Solutions
-            </h2>
+            <div class="flex justify-between items-center">
+              <h2 class="company-name font-bold text-[#002C5C] text-2xl">
+                DataViz Solutions
+              </h2>
+              <button
+                class="delete-btn rounded-full bg-transparent border border-gray-300 text-black font-bold w-10 h-10"
+              >
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
             <span class="job-name block text-[#64748B] text-[16px]"
               >Data Visualization Specialist</span
             >
@@ -197,9 +204,9 @@
               class="job-details flex gap-2 text-red-500 text-sm items-center"
             >
               <span>Boston, MA</span>
-              <span>.</span>
+              <span> &bull; </span>
               <span>Full-time</span>
-              <span>.</span>
+              <span> &bull; </span>
               <span>$125,000 - $165,000</span>
             </div>
             <p
@@ -215,30 +222,30 @@
 
             <div class="flex gap-5">
               <button
-                class="interview-btn px-4 py-2 text-green-500 font-bold text-2xl border-2 border-green-500 rounded"
+                class="interview-btn px-4 py-2 text-green-500 font-bold text-lg md:text-2xl border-2 border-green-500 rounded"
               >
                 INTERVIEW
               </button>
               <button
-                class="rejected-btn px-4 py-2 text-red-500 font-bold text-2xl border-2 border-red-500 rounded"
+                class="rejected-btn px-4 py-2 text-red-500 font-bold text-lg md:text-2xl border-2 border-red-500 rounded"
               >
                 REJECTED
               </button>
             </div>
           </div>
-          <div>
-            <button
-              class="delete-btn rounded-full bg-transparent border border-gray-300 text-black font-bold w-10 h-10"
-            >
-              <i class="fa-regular fa-trash-can"></i>
-            </button>
-          </div>
         </div>
-        <div class="job-card shadow p-10 rounded-lg flex justify-between">
+        <div class="job-card shadow p-5 md:p-10 rounded-lg">
           <div class="card-details flex flex-col gap-5">
-            <h2 class="company-name font-bold text-[#002C5C] text-2xl">
-              CloudFirst Inc
-            </h2>
+            <div class="flex justify-between items-center">
+              <h2 class="company-name font-bold text-[#002C5C] text-2xl">
+                CloudFirst Inc
+              </h2>
+              <button
+                class="delete-btn rounded-full bg-transparent border border-gray-300 text-black font-bold w-10 h-10"
+              >
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
             <span class="job-name block text-[#64748B] text-[16px]"
               >Backend Developer</span
             >
@@ -246,9 +253,9 @@
               class="job-details flex gap-2 text-red-500 text-sm items-center"
             >
               <span>Seattle, WA </span>
-              <span>.</span>
+              <span> &bull; </span>
               <span>Full-time</span>
-              <span>.</span>
+              <span> &bull; </span>
               <span>$140,000 - $190,000</span>
             </div>
             <p
@@ -263,30 +270,30 @@
             </p>
             <div class="flex gap-5">
               <button
-                class="interview-btn px-4 py-2 text-green-500 font-bold text-2xl border-2 border-green-500 rounded"
+                class="interview-btn px-4 py-2 text-green-500 font-bold text-lg md:text-2xl border-2 border-green-500 rounded"
               >
                 INTERVIEW
               </button>
               <button
-                class="rejected-btn px-4 py-2 text-red-500 font-bold text-2xl border-2 border-red-500 rounded"
+                class="rejected-btn px-4 py-2 text-red-500 font-bold text-lg md:text-2xl border-2 border-red-500 rounded"
               >
                 REJECTED
               </button>
             </div>
           </div>
-          <div>
-            <button
-              class="delete-btn rounded-full bg-transparent border border-gray-300 text-black font-bold w-10 h-10"
-            >
-              <i class="fa-regular fa-trash-can"></i>
-            </button>
-          </div>
         </div>
-        <div class="job-card shadow p-10 rounded-lg flex justify-between">
+        <div class="job-card shadow p-5 md:p-10 rounded-lg">
           <div class="card-details flex flex-col gap-5">
-            <h2 class="company-name font-bold text-[#002C5C] text-2xl">
-              Innovation Labs
-            </h2>
+            <div class="flex justify-between items-center">
+              <h2 class="company-name font-bold text-[#002C5C] text-2xl">
+                Innovation Labs
+              </h2>
+              <button
+                class="delete-btn rounded-full bg-transparent border border-gray-300 text-black font-bold w-10 h-10"
+              >
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
             <span class="job-name block text-[#64748B] text-[16px]"
               >UI/UX Engineer</span
             >
@@ -294,9 +301,9 @@
               class="job-details flex gap-2 text-red-500 text-sm items-center"
             >
               <span>Austin, TX</span>
-              <span>.</span>
+              <span> &bull;</span>
               <span>Full-time</span>
-              <span>.</span>
+              <span> &bull; </span>
               <span> $110,000 - $150,000</span>
             </div>
             <p
@@ -312,30 +319,30 @@
             </p>
             <div class="flex gap-5">
               <button
-                class="interview-btn px-4 py-2 text-green-500 font-bold text-2xl border-2 border-green-500 rounded"
+                class="interview-btn px-4 py-2 text-green-500 font-bold text-lg md:text-2xl border-2 border-green-500 rounded"
               >
                 INTERVIEW
               </button>
               <button
-                class="rejected-btn px-4 py-2 text-red-500 font-bold text-2xl border-2 border-red-500 rounded"
+                class="rejected-btn px-4 py-2 text-red-500 font-bold text-lg md:text-2xl border-2 border-red-500 rounded"
               >
                 REJECTED
               </button>
             </div>
           </div>
-          <div>
-            <button
-              class="delete-btn rounded-full bg-transparent border border-gray-300 text-black font-bold w-10 h-10"
-            >
-              <i class="fa-regular fa-trash-can"></i>
-            </button>
-          </div>
         </div>
-        <div class="job-card shadow p-10 rounded-lg flex justify-between">
+        <div class="job-card shadow p-5 md:p-10 rounded-lg">
           <div class="card-details flex flex-col gap-5">
-            <h2 class="company-name font-bold text-[#002C5C] text-2xl">
-              MegaCorp Solutions
-            </h2>
+            <div class="flex justify-between items-center">
+              <h2 class="company-name font-bold text-[#002C5C] text-2xl">
+                MegaCorp Solutions
+              </h2>
+              <button
+                class="delete-btn rounded-full bg-transparent border border-gray-300 text-black font-bold w-10 h-10"
+              >
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
             <span class="job-name block text-[#64748B] text-[16px]"
               >JavaScript Developer</span
             >
@@ -343,9 +350,9 @@
               class="job-details flex gap-2 text-red-500 text-sm items-center"
             >
               <span>New York, NY </span>
-              <span>.</span>
+              <span> &bull; </span>
               <span>Full-time</span>
-              <span>.</span>
+              <span> &bull; </span>
               <span> $130,000 - $170,00</span>
             </div>
             <p
@@ -361,30 +368,30 @@
             </p>
             <div class="flex gap-5">
               <button
-                class="interview-btn px-4 py-2 text-green-500 font-bold text-2xl border-2 border-green-500 rounded"
+                class="interview-btn px-4 py-2 text-green-500 font-bold text-lg md:text-2xl border-2 border-green-500 rounded"
               >
                 INTERVIEW
               </button>
               <button
-                class="rejected-btn px-4 py-2 text-red-500 font-bold text-2xl border-2 border-red-500 rounded"
+                class="rejected-btn px-4 py-2 text-red-500 font-bold text-lg md:text-2xl border-2 border-red-500 rounded"
               >
                 REJECTED
               </button>
             </div>
           </div>
-          <div>
-            <button
-              class="delete-btn rounded-full bg-transparent border border-gray-300 text-black font-bold w-10 h-10"
-            >
-              <i class="fa-regular fa-trash-can"></i>
-            </button>
-          </div>
         </div>
-        <div class="job-card shadow p-10 rounded-lg flex justify-between">
+        <div class="job-card shadow p-5 md:p-10 rounded-lg">
           <div class="card-details flex flex-col gap-5">
-            <h2 class="company-name font-bold text-[#002C5C] text-2xl">
-              StartupXYZ
-            </h2>
+            <div class="flex justify-between items-center">
+              <h2 class="company-name font-bold text-[#002C5C] text-2xl">
+                StartupXYZ
+              </h2>
+              <button
+                class="delete-btn rounded-full bg-transparent border border-gray-300 text-black font-bold w-10 h-10"
+              >
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
             <span class="job-name block text-[#64748B] text-[16px]"
               >Full Stack Engineer</span
             >
@@ -392,9 +399,9 @@
               class="job-details flex gap-2 text-red-500 text-sm items-center"
             >
               <span>Remote</span>
-              <span>.</span>
+              <span> &bull; </span>
               <span>Full-time</span>
-              <span>.</span>
+              <span> &bull; </span>
               <span>$120,000 - $160,000</span>
             </div>
             <p
@@ -411,41 +418,41 @@
 
             <div class="flex gap-5">
               <button
-                class="interview-btn px-4 py-2 text-green-500 font-bold text-2xl border-2 border-green-500 rounded"
+                class="interview-btn px-4 py-2 text-green-500 font-bold text-lg md:text-2xl border-2 border-green-500 rounded"
               >
                 INTERVIEW
               </button>
               <button
-                class="rejected-btn px-4 py-2 text-red-500 font-bold text-2xl border-2 border-red-500 rounded"
+                class="rejected-btn px-4 py-2 text-red-500 font-bold text-lg md:text-2xl border-2 border-red-500 rounded"
               >
                 REJECTED
               </button>
             </div>
           </div>
-          <div>
-            <button
-              class="delete-btn rounded-full bg-transparent border border-gray-300 text-black font-bold w-10 h-10"
-            >
-              <i class="fa-regular fa-trash-can"></i>
-            </button>
-          </div>
         </div>
-        <div class="job-card shadow p-10 rounded-lg flex justify-between">
+        <div class="job-card shadow p-5 md:p-10 rounded-lg">
           <div class="card-details flex flex-col gap-5">
-            <h2 class="company-name font-bold text-[#002C5C] text-2xl">
-              TechCorp Industries
-            </h2>
+            <div class="flex justify-between items-center">
+              <h2 class="company-name font-bold text-[#002C5C] text-2xl">
+                TechCorp Industries
+              </h2>
+              <button
+                class="delete-btn rounded-full bg-transparent border border-gray-300 text-black font-bold w-10 h-10"
+              >
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
             <span class="job-name block text-[#64748B] text-[16px]"
               >Senior Frontend Developer</span
             >
             <div
               class="job-details flex gap-2 text-red-500 text-sm items-center"
             >
-              <span>Remote</span>
-              <span>.</span>
+              <span>San Francisco, CA</span>
+              <span> &bull;</span>
               <span>Full-time</span>
-              <span>.</span>
-              <span> $130,000 - $175,0000</span>
+              <span> &bull; </span>
+              <span> $130,000 - $175,000</span>
             </div>
             <p
               class="status w-max rounded text-sm font-semibold font-white py-3 px-5 bg-[#EEF4FF]"
@@ -454,29 +461,21 @@
             </p>
 
             <p>
-              We are looking for an experienced Frontend Developer to build
-              scalable web applications using React and TypeScript. You will
-              work with a talented team on cutting-edge projects.
+              Build cross-platform mobile applications using React Native. Work
+              on products used by millions of users worldwide.
             </p>
             <div class="flex gap-5">
               <button
-                class="interview-btn px-4 py-2 text-green-500 font-bold text-2xl border-2 border-green-500 rounded"
+                class="interview-btn px-4 py-2 text-green-500 font-bold text-lg md:text-2xl border-2 border-green-500 rounded"
               >
                 INTERVIEW
               </button>
               <button
-                class="rejected-btn px-4 py-2 text-red-500 font-bold text-2xl border-2 border-red-500 rounded"
+                class="rejected-btn px-4 py-2 text-red-500 font-bold text-lg md:text-2xl border-2 border-red-500 rounded"
               >
                 REJECTED
               </button>
             </div>
-          </div>
-          <div>
-            <button
-              class="delete-btn rounded-full bg-transparent border border-gray-300 text-black font-bold w-10 h-10"
-            >
-              <i class="fa-regular fa-trash-can"></i>
-            </button>
           </div>
         </div>
       </section>

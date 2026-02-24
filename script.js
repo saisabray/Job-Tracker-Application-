@@ -24,7 +24,7 @@ function calculateCount() {
   if (currentStatus === "filter-interview") {
     totalText.innerText = interviewList.length + " Jobs";
   } else if (currentStatus === "filter-rejected") {
-    totalText.innerText = rejectedList.length +" Jobs";
+    totalText.innerText = rejectedList.length + " Jobs";
   } else {
     totalText.innerText = total + " Jobs";
   }
@@ -49,7 +49,7 @@ function toggleShow(id) {
   } else if (id === "filter-all") {
     jobList.classList.remove("hidden");
     filterSection.classList.add("hidden");
-    allRender()
+    allRender();
   } else if (id === "filter-rejected") {
     jobList.classList.add("hidden");
     filterSection.classList.remove("hidden");
@@ -86,6 +86,8 @@ mainContainer.addEventListener("click", function (e) {
     );
     if (currentStatus === "filter-interview") {
       interviewRender();
+    } else if (currentStatus === "filter-rejected") {
+      rejectedRender();
     }
     calculateCount();
   }
@@ -112,7 +114,9 @@ mainContainer.addEventListener("click", function (e) {
     interviewList = interviewList.filter(
       (item) => item.companyName !== companyName,
     );
-    if (currentStatus === "filter-rejected") {
+    if (currentStatus === "filter-interview") {
+      interviewRender();
+    } else if (currentStatus === "filter-rejected") {
       rejectedRender();
     }
     calculateCount();
@@ -163,11 +167,19 @@ function interviewRender() {
   }
   for (let interview of interviewList) {
     const div = document.createElement("div");
-    div.className = "job-card shadow p-10 rounded-lg flex justify-between";
+    div.className = "job-card shadow p-5 md:p-10 rounded-lg";
     div.innerHTML = `
             <div class="card-details flex flex-col gap-5">
-            <h2 class="company-name font-bold text-[#002C5C] text-2xl">
-${interview.companyName}</h2>
+           <div class="flex justify-between items-center">
+              <h2 class="company-name font-bold text-[#002C5C] text-2xl">
+                ${interview.companyName}
+              </h2>
+              <button
+                class="delete-btn rounded-full bg-transparent border border-gray-300 text-black font-bold w-10 h-10"
+              >
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
             <span class="job-name block text-[#64748B] text-[16px]"
               >${interview.jobName}</span
             >
@@ -186,7 +198,7 @@ ${interview.companyName}</h2>
             </p>
             <div class="flex gap-5">
               <button
-                class="interview-btn px-4 py-2 text-green-500 font-bold text-2xl border-2 border-green-500 rounded"
+                class="interview-btn px-4 py-2 text-green-500 font-bold text-lg md:text-2xl border-2 border-green-500 rounded"
               >
                 INTERVIEW
               </button>
@@ -197,13 +209,7 @@ ${interview.companyName}</h2>
               </button>
             </div>
           </div>
-          <div>
-            <button
-              class="delete-btn bg-red-400 text-white font-bold py-2 px-3"
-            >
-              Delete
-            </button>
-          </div>
+         
   `;
     filterSection.appendChild(div);
   }
@@ -230,12 +236,20 @@ function rejectedRender() {
   }
   for (let rejected of rejectedList) {
     const div = document.createElement("div");
-    div.className = "job-card shadow p-10 rounded-lg flex justify-between";
+    div.className = "job-card shadow p-5 md:p-10 rounded-lg ";
     div.innerHTML = `
         
          <div class="card-details flex flex-col gap-5">
-            <h2 class="company-name font-bold text-[#002C5C] text-2xl">
-${rejected.companyName}            </h2>
+<div class="flex justify-between items-center">
+              <h2 class="company-name font-bold text-[#002C5C] text-2xl">
+                ${rejected.companyName}
+              </h2>
+              <button
+                class="delete-btn rounded-full bg-transparent border border-gray-300 text-black font-bold w-10 h-10"
+              >
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
             <span class="job-name block text-[#64748B] text-[16px]"
               >${rejected.jobName}</span
             >
@@ -260,19 +274,13 @@ ${rejected.status}            </p>
                 INTERVIEW
               </button>
               <button
-                class="rejected-btn px-4 py-2 text-red-500 font-bold text-2xl border-2 border-red-500 rounded"
+                class="rejected-btn px-4 py-2 text-red-500 font-bold text-lg md:text-2xl border-2 border-red-500 rounded"
               >
                 REJECTED
               </button>
             </div>
           </div>
-          <div>
-            <button
-              class="delete-btn bg-red-400 text-white font-bold py-2 px-3"
-            >
-              Delete
-            </button>
-          </div>
+
 
   `;
     filterSection.appendChild(div);
